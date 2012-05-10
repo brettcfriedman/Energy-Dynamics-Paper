@@ -123,10 +123,11 @@
 
 
 \begin{abstract}
-Energy dynamics calculations in a 3D fluid simulation of drift wave turbulence in the linear Large Plasma Device \cite{Gekelman1991} illuminate processes that drive and dissipate the turbulence.
+Energy dynamics calculations in a 3D fluid simulation of drift wave turbulence in the linear Large Plasma Device (LAPD) [W. Gekelman \emph{et al.},Rev. Sci. Inst. {\bf 62}, 2875 (1991)]
+illuminate processes that drive and dissipate the turbulence.
 These calculations reveal that a nonlinear instability dominates the injection of energy into the turbulence by overtaking the linear drift wave instability that resides in the system of equations.
 The nonlinear instability drives flute-like $k_\parallel = 0$ density fluctuations through advection of the equilibrium density profile. 
-Through nonlinear axial wavenumber transfer to $k_\parallel \ne 0$ flctuations, the nonlinear instability accesses the adiabatic response, 
+Through nonlinear axial wavenumber transfer to $k_\parallel \ne 0$ fluctuations, the nonlinear instability accesses the adiabatic response, 
 which provides the requisite energy transfer channel from density to potential fluctuations as well as the
 phase shift that causes instability. When the nonlinear instability is artificially removed from the system, the turbulence has a coherent frequency and wavenumber spectrum, which is inconsistent
 with experimental data, indicating that the nonlinear instability drives the plasma turbulence in the experiment.
@@ -135,7 +136,7 @@ with experimental data, indicating that the nonlinear instability drives the pla
 \maketitle
 
 \section{Introduction}
-It is common practice to study a system's linear stability properties to gain insight into tubulent dynamics. It is often easier to calculate and analyze linear modes and growth rates than
+It is common practice to study a system's linear stability properties to gain insight into turbulent dynamics. It is often easier to calculate and analyze linear modes and growth rates than
 to simulate and analyze nonlinear turbulence. However, there are several situations in which linear properties can be misleading in understanding turbulent systems. First,
 linear studies that neglect stable branches of the linear dispersion relation often miss details of nonlinear dynamics. For example, stable eigenmodes can often
 impact nonlinear dynamics by providing energy sinks and sometimes energy sources not found on the most unstable linear branch
@@ -143,10 +144,10 @@ impact nonlinear dynamics by providing energy sinks and sometimes energy sources
 the energy injection and dissipation ranges, making the turbulent dynamics very different from the Kolmogorov picture of hydrodynamic turbulence \cite{Kolmogorov1941}.
 Second, systems with non-normal modes (non-orthogonal eigenvectors) display properties that are unexpected from linear calculations \cite{kim2010,camargo1998}. 
 In fact, systems with non-normal modes even make it difficult to predict dynamics
-when stable eigenmode branches are included in analyses. Third, linear stability analyses miss crucial nonlinear instability effects, which come in several varieties. 
+when stable eigenmode branches are included in analyzes. Third, linear stability analysis miss crucial nonlinear instability effects, which come in several varieties. 
 
-The most obvious variety of a nonlinear instability effect is that of subcritical turublence in which no linear instabilities exist but turbulence is self-sustained 
-given strong enough finite-amplitude perturbations. Subcritical turbulence is common in hydrodynamics \cite{manneville2008}, and although not as prevelent in plasma physics,
+The most obvious variety of a nonlinear instability effect is that of subcritical turbulence in which no linear instabilities exist but turbulence is self-sustained 
+given strong enough finite-amplitude perturbations. Subcritical turbulence is common in hydrodynamics \cite{manneville2008}, and although not as prevalent in plasma physics,
 several cases of subcritical plasma instabilities have been shown in the literature \cite{scott1990,scott1992,drake1995,nordman1993,waltz1985,itoh1996}.
 The second variety of nonlinear instability includes cases in which a particular linear instability is present in a system, but the turbulence is maintained
 by a nonlinear instability mechanism with different physical origin than the linear instability mechanism. This has been thoroughly explored in tokamak edge simulations in which
@@ -156,10 +157,10 @@ as the linear instability. In some of these cases nonlinear wavenumber transfers
 decrease drive \cite{dimits2000,ernst2004}. 
 
 In order to avoid the pitfalls of relying too heavily on linear stability calculations in forming conclusions on turbulence characteristics, it is useful to diagnose turbulent simulations
-with energy dynamics analyses. Energy dynamics analyses track energy input into turbulent fluctuations and energy dissipation out of them. They also track conservative energy transfer
+with energy dynamics analyzes. Energy dynamics analyzes track energy input into turbulent fluctuations and energy dissipation out of them. They also track conservative energy transfer
 between different energy types (e.g. from potential to kinetic energy) and between different scales, waves, or eigenmodes of a system. In this study, a 
 two-fluid Braginskii model of turbulence in the Large Plasma Device (LAPD) is subjected to such an energy dynamics analysis. The result is that a nonlinear instability drives and maintains
-the turbulence in the steady state saturated phase of the simulation. While a linear restistive drift wave instability resides in the system, the nonlinear drift wave instability dominates
+the turbulence in the steady state saturated phase of the simulation. While a linear resistive drift wave instability resides in the system, the nonlinear drift wave instability dominates
 when the fluctuation amplitude becomes large enough. The nonlinear instability is identified by its energy growth rate spectrum, which varies significantly from the linear growth rate spectrum.
 
 
@@ -186,9 +187,9 @@ temperatures and potentials to the equilibrium peak electron temperature. The eq
 - \frac{2 m_e}{m_i} \nue T_e  + \mu_T \gradperp^2 T_e +  S_T + \{\phi,T_e\}.
 \eeqar
 
-In these equations, $\mu_N$, $\mu_T$, and $\mu_\phi$ are artificial diffusion and viscosity coefficients used for subgrid dissipation. They are large enough to achieve saturation
+In these equations, $\mu_N$, $\mu_T$, and $\mu_\phi$ are artificial diffusion and viscosity coefficients used for sub-grid dissipation. They are large enough to achieve saturation
 and grid convergence, but small enough to allow for turbulence to develop. In the simulations, they are all given the same value of $1.25 \times 10^{-3}$. This is the only free
-parameter in the simulations. All other paramters such as the electron collisionality $\nue$, ion-neutral
+parameter in the simulations. All other parameters such as the electron collisionality $\nue$, ion-neutral
 collisionality $\nuin$, parallel electron thermal conductivity $\kpe$, and mass ratio $\fmie$ are calculated from the experimental values.
 There are two sources of free energy: the density gradient due to the equilibrium density profile $N_0$, and the equilibrium electron temperature gradient in $T_{e0}$, both of which are
 taken from experimental fits. $N_0$ and $T_{e0}$ are only functions of the distance from the axis $r$. 
@@ -234,8 +235,8 @@ These energies are conserved individually by their respective advective nonlinea
 
 It is most instructive to analyze the spectral energy dynamics rather than the total energy dynamics. To do this, each field at a given time is Fourier decomposed as 
 $f(r,\theta,z) = \sum_k f_k(r) e^{i (m \theta + k_z z )}$,
-where the subscript $k$ represents the spectral wavenumbers, $(m,n)$. $m$ is the azimuthal wavenumber while $n$ is the axial integer wavenumber such that $k_z = \frac{2 \pi n}{l_z}$. Note that
-the radial direction is not spectrally decomposed because the radial dependence of the profiles and differential operators complicates the analysis.
+where the subscript $k$ represents the spectral wavenumbers, $(m,n)$. $m$ is the azimuthal wavenumber while $n$ is the axial integer wavenumber such that $k_z \equiv k_\para = \frac{2 \pi n}{l_z}$. 
+Note that the radial direction is not spectrally decomposed because the radial dependence of the profiles and differential operators complicates the analysis.
 Then, the energy of each Fourier $k = (m,n)$ mode is
 
 \beq
@@ -314,7 +315,7 @@ Q_t(k) & = & Re \left\{ \left< -\frac{3}{2} \frac{i m}{r} \pdr T_{e0} \phi_k t_k
 
 $Q_n(k)$ is the energy extraction from the equilibrium density profile into the density fluctuations. 
 This term may have either sign depending on the phase relation between $\phi_k$ and $n_k$, so it can in fact dissipate fluctuation potential energy from the system as well as create it
-at each $k$. $Q_t(k)$ is completely analagous to $Q_n(k)$ but for the temperature rather than the density. 
+at each $k$. $Q_t(k)$ is completely analogous to $Q_n(k)$ but for the temperature rather than the density. 
 $Q_v(k)$ is parallel kinetic energy extraction or dissipation, which is a rather unphysical, but fortunately insignificant term.
 The source of these terms are the equilibrium gradients, which is evident because if the profiles
 were flat ($N_0=T_{e0}=1$), all $Q(k)$ would vanish.
@@ -356,8 +357,8 @@ The turbulent spectral energy, defined in equation \ref{E_k} is shown in Fig. \r
 There are a few clear nonlinear properties
 seen in these figures. The first is that the energy is located in different spectral regions for the different energy types. This has to be a nonlinear effect because the linear eigenmodes
 are Fourier modes in the azimuthal and axial directions and all fields grow at the same rate for an eigenmode. 
-Another property unexpected from linear stability analysis is that the majority of the potential and perpendicular kinetic energy ($E_n$, $E_t$, and $E_\phi$) is contained in $n=0$ structures, 
-which are often called flute modes.
+Another property unexpected from linear stability analysis is that the majority of the potential and perpendicular kinetic energy ($E_n$, $E_t$, and $E_\phi$) is contained in $n=0$ ($k_\para = 0$) 
+structures, which are often called flute modes.
 This is unexpected because there is no $n=0$ linear instability present in the system, which has been confirmed by eigenvalue calculations. The only linear instability of the system is the
 linear resistive drift wave instability, which requires finite $n$ to provide the phase shift and state variable coupling to drive the waves unstable. Perhaps equally unexpected is the complete
 lack of parallel kinetic energy in the $n=0$ range. The $E_v$ spectrum looks like a traditional linear drift wave spectrum, but does not correspond to the other fields, which is atypical of
@@ -385,7 +386,7 @@ In the first step, $n=0$ density and potential fluctuations \emph{nonconservativ
 this energy into the $n=0$ density fluctuations only. The nonconservative linear terms, after all, can only inject, dissipate, or transfer energy at one wavenumber at a time, so it takes
 $n=0$ fluctuations to nonconservatively inject energy into $n=0$ fluctuations.
 Note also that the temperature fluctuations work in the same way as the density fluctuations, and one could replace $n(m,n)$ (the spectral density component)
-with $t(m,n)$ (the spectral temperature component) in the diagram. The density and temperature are analagous and work in parallel, however the temperature fluctuations are a few times smaller
+with $t(m,n)$ (the spectral temperature component) in the diagram. The density and temperature are analogous and work in parallel, however the temperature fluctuations are a few times smaller
 than the density fluctuations and provide weaker drive because parallel heat conduction strongly dissipates the temperature fluctuations, which is why the diagram highlights the density contribution.
 This was also previously observed \cite{zeiler1997}.
 In the second step of the diagram, these $n=0$ density fluctuations
@@ -422,12 +423,12 @@ Furthermore, all of the net energy injected into the density fluctuations ($Q_n 
 the parallel current (electron velocity), which only occurs at finite $n$, almost entirely at $n = \pm 1$. The net change of $E_n$, which is the sum $Q_n + D_n + C_n$ over all $m$ and $n$
 is approximately zero because this analysis is averaged over the steady state turbulence, although this is not so evident in Fig. \ref{nc_dynamics_figures}a without the source dissipation. 
 The necessary balance implies, as will be proven later, that the nonlinearities transfer energy from $n=0$ to $n = \pm 1$ modes, where that energy can then
-be transfered to the parallel current.
+be transferred to the parallel current.
 
 Fig. \ref{nc_dynamics_figures}b shows the temperature potential energy dynamics. Again flute structures inject energy into the fluctuations, but unlike in the density case, $n = \pm 1$ modes
 dissipate more energy than they inject. Moreover, the small value of $C_t$ reveals that the temperature fluctuations inject only a small amount of energy into the parallel current compared
 to the density fluctuations. Despite the fact that the equilibrium temperature gradient is quite a bit steeper than the density gradient, its free energy is not used efficiently by the waves
-in the sense that it is largely dissipated before being transfered to the electrostatic potential. The reason for the difference
+in the sense that it is largely dissipated before being transferred to the electrostatic potential. The reason for the difference
 between the density and temperature responses is the extra dissipation routes for the temperature fluctuations, namely, the parallel heat conduction and electron-ion heat exchange.
 One should therefore be careful in assuming that adding free energy sources to an analysis will automatically increase instability drive.
 The same type of result was seen in a study of tokamak edge turbulence \cite{zeiler1997}, although there, the temperature fluctuations were even more dissipative than in this study in that they
@@ -441,7 +442,7 @@ collisions and viscosity dissipate energy from the potential fluctuations as sho
 contribute to the transfer channel and dissipation, whereas these modes are negligible for the other fields. 
 
 The last piece, the parallel dynamics, also called the adiabatic response, is displayed in Fig. \ref{nc_dynamics_figures}d. 
-The primary effect of the adabatic response is to take energy from the density
+The primary effect of the adiabatic response is to take energy from the density
 fluctuations and transfer it to the potential fluctuations, which only occurs at finite parallel wavenumber. This effect corresponds to the third step in Fig. \ref{nl_instability_diagram}.
 Moreover, resistivity dissipates a fair portion of this parallel kinetic energy, and although not evident from this figure, provides
 the primary phase shift mechanism between the density and potential that allows for instability. The temperature fluctuations also provide energy to the potential fluctuations
@@ -461,7 +462,7 @@ which is a function of $m$.
 
 
 Steps 2 and 4 in Fig. \ref{nl_instability_diagram} come not from the nonconservative linear terms in the equations, but from the conservative nonlinear advective terms.
-The interactions described by the advective nonlinearities are in the nonlinear tranfer functions: $T_{j}(k,k')$ in equation \ref{dEdt_j}.
+The interactions described by the advective nonlinearities are in the nonlinear transfer functions: $T_{j}(k,k')$ in equation \ref{dEdt_j}.
 The difficulty in looking at the $T_{j}(k,k')$ functions is that they are four dimensional functions of $(m,n,n',m')$, 
 which makes complete visualization impossible. It is therefore convenient to sum over various transfers or look at specific wavenumber transfers of interest. The most easily decipherable
 results that compliment the results of Fig. \ref{nc_dynamics_figures} are shown in Fig. \ref{conservative_transfers}. First, Fig. \ref{conservative_transfers}a sums the transfer functions over
@@ -475,8 +476,8 @@ nonlinearities cause inverse transfer to low wavenumbers.
 Fig. \ref{conservative_transfers}b displays the conservative transfers summed over $(n,m',n')$, leaving only a function of $m$, which describes transfer into and out
 of different parallel modes. This is the figure which provides evidence for steps 2 and 4 of the instability diagram.
 Now, as expected from step 2 of the diagram and foreshadowed by Fig. \ref{nc_dynamics_figures}b, 
-density potential energy is aggregately transfered from $n=0$ convective cells into $n \ne 0$ modes, specifically $n = \pm 1$. This can be called a direct
-transfer in analogy with the terminology used for hydrodynamic wavenumber cascades. The temperature fluctuations have the same transfer tendancy 
+density potential energy is aggregately transferred from $n=0$ convective cells into $n \ne 0$ modes, specifically $n = \pm 1$. This can be called a direct
+transfer in analogy with the terminology used for hydrodynamic wavenumber cascades. The temperature fluctuations have the same transfer tendency 
 as the density fluctuations, while the parallel velocity exhibits direct transfer, although from $n=1$ to higher modes since there is never any $n=0$ energy in the parallel velocity.
 The potential fluctuations, on the other hand, exhibit inverse parallel wavenumber transfer (step 4 of the diagram),
 populating $n=0$ potential structures. This nonlinear transfer is the only way to drive energy into
@@ -582,14 +583,14 @@ understanding nonlinear instabilities is important because they can invalidate t
 levels when linear instabilities are insignificant in the turbulent state. Simple rules for when nonlinear instabilities will act or overtake linear ones are needed, and one attempt at such
 a rule is made in \cite{scott2005} for drift wave turbulence. That rule states that nonlinear instabilities will overtake linear instabilities when $\gamma_L < \omega_*$, which is true
 for the parameters used in this study. However, more study of this rule and others is warranted, and will be important as long as linear calculations are used to inform predictions of turbulence.
-Nevertheless, full nonlinear simulations and energy dynamics analyses should be performed whenever possible to obtain details of plasma turbulence mechanisms.
+Nevertheless, full nonlinear simulations and energy dynamics analyzes should be performed whenever possible to obtain details of plasma turbulence mechanisms.
 
 
-\begin{acknowledgements}
+\begin{acknowledgments}
 This research was performed under appointment to the Fusion Energy Sciences Fellowship Program administered by Oak Ridge Institute for
 Science and Education under a contract between the U.S. Department of Energy and the Oak Ridge Associated Universities. We would also like to thank Paul Terry for many
 useful discussions on this topic.
-\end{acknowledgements}
+\end{acknowledgments}
 
 
 
@@ -629,7 +630,7 @@ Substituting this decomposition into equation \ref{ni_eq} gives:
 + \frac{1}{r} \sum_{k,k'} (i m n_k \pdr \phi_{k'} - i m' \pdr n_k \phi_{k'}) e^{i (m + m') \theta + i (k_z + k'_z) z}.
 \eeqar
 
-Multiplying through by $n_{k''}^* e^{- i m'' \theta - i k''_z z}$ and integrating over space (and permutting primes) gives:
+Multiplying through by $n_{k''}^* e^{- i m'' \theta - i k''_z z}$ and integrating over space (and permuting primes) gives:
 
 \beqar
 \label{density_evolution}
