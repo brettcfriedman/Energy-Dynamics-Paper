@@ -195,7 +195,9 @@ although electron temperature fluctuations were not included in those studies.
 The equations are developed with Bohm normalizations: lengths are
 normalized to the ion sound gyroradius $\rho_s$, times to the ion
 cyclotron time $\omega_{ci}^{-1}$, velocities to the sound speed $c_s$, densities to the equilibrium peak density, and electron
-temperatures and potentials to the equilibrium peak electron temperature. The equations are:
+temperatures and potentials to the equilibrium peak electron temperature. All of these values are constants (not functions of radius) and the physical quantities used to calculate 
+these constants are the following: the magnetic field is $1$ kG, the ion unit mass is $4$, the peak density is $2.86 \times 10^{12}$ cm$^{-3}$, and the peak electron temperature
+is $6$ eV. The equations are:
 
 \beqar
 \label{ni_eq}
@@ -214,7 +216,7 @@ and grid convergence~\cite{friedman2012}, but small enough to allow for turbulen
 This is the only free parameter in the simulations. All other parameters such as the electron collisionality $\nue$, ion-neutral
 collisionality $\nuin$, parallel electron thermal conductivity $\kpe$, and mass ratio $\fmie$ are calculated from the experimental parameters.
 There are two sources of free energy: the density gradient due to the equilibrium density profile $N_0$, and the equilibrium electron temperature gradient in $T_{e0}$, both of which are
-taken from experimental fits. $N_0$ and $T_{e0}$ are functions of only the radial cylindrical coordinate $r$. 
+taken from experimental fits. $N_0$ and $T_{e0}$ are functions of only the radial cylindrical coordinate $r$, and they are shown in Fig.~\ref{eq_profiles}. 
 
 The terms in Poisson brackets are the $E \times B$ advective nonlinearities, which are the only nonlinearities used in the simulations.
 The numerical simulations are fully spatial in all three dimensions (as opposed to spectral) and use cylindrical annular geometry ($12<r<40$ cm).
@@ -227,13 +229,17 @@ The azimuthal average of the potential $\phi$ is allowed to evolve in
 the simulation, allowing zonal flows to arise.
 The parallel current, which is often found explicitly in these equations is replaced here by $J_\para = - N_0 \vpe$. \\
 
+\begin{figure}[!htbp]
+\includegraphics[]{equilibrium_profiles}
+\hfil
+\caption{The profiles of density $N_0$ and electron temperature $T_{e0}$ used in the simulations normalized to their peak values of $2.86 \times 10^{12}$ cm$^{-3}$ and 
+$6$ eV, respectively.}
+\label{eq_profiles}
+\end{figure}
+
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.35\textwidth,height=48mm]{sim_vs_exp_spec}~a)
-\hfil
-\includegraphics[width=0.35\textwidth,height=48mm]{pdf}~b)
-\hfil
-\includegraphics[width=0.35\textwidth,height=48mm]{radial_rms}~c)
+\includegraphics[]{statistics}
 \hfil
 \caption{\textbf{a)} The power spectral density of the density fluctuations, showing the results from simulation versus experiment, \textbf{b)} the probability distribution function
 of the density fluctuations, and \textbf{c)} the RMS amplitude of the density fluctuations as a function of radius.}
@@ -362,7 +368,7 @@ is quite insignificant.
 \subsection{Energy Spectra}
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.40\textwidth,height=60mm]{time_evolution}
+\includegraphics[]{time_evolution}
 \hfil
 \caption{Time evolution of the volume-averaged total energy. Each time step is $400/\omega_{ci} \sim 170 \mu s$}
 \label{time_evolution}
@@ -370,13 +376,7 @@ is quite insignificant.
 
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.40\textwidth,height=45mm]{En}~a)
-\hfil
-\includegraphics[width=0.40\textwidth,height=45mm]{Et}~b)
-\hfil
-\includegraphics[width=0.40\textwidth,height=45mm]{Ep}~c)
-\hfil
-\includegraphics[width=0.40\textwidth,height=45mm]{Ev}~d)
+\includegraphics[]{energy_spectra}
 \hfil
 \caption{\textbf{a)} $E_n(\vec{k})$, \textbf{b)} $E_t(\vec{k})$, \textbf{c)} $E_\phi(\vec{k})$, and \textbf{d)} $E_v(\vec{k})$ in the $m-n$ plane averaged over time during the saturated turbulent phase.
 Note the different scales used on each figure.}
@@ -390,8 +390,9 @@ There are a few clear nonlinear properties
 seen in these figures. The first is that the energy is located in different spectral regions for the different energy types. This has to be a nonlinear effect because the linear eigenmodes
 are Fourier modes in the azimuthal and axial directions and all fields grow at the same rate for an eigenmode. 
 Another property unexpected from linear stability analysis is that most of the potential and perpendicular kinetic energy ($E_n$, $E_t$, and $E_\phi$) is contained in $n=0$ ($k_\para = 0$) 
-structures, which are often called flute modes. A previous study pointed out this flute mode dominance in LAPD simulations~\cite{Umansky2011}.
-Such a feature is unexpected because there is no $n=0$ linear instability present in the system, which is confirmed by eigenvalue calculations~\cite{Popovich2010a}.
+structures, which are often called flute modes. Previous studies pointed out this flute mode dominance in LAPD simulations~\cite{rogers2010,Umansky2011}. One of these studies~\cite{rogers2010},
+however, used a momentum source that produced a large radial electric field, possibly leading to a dominating Kelvin-Helmoltz instability at $k_\para = 0$.
+Such a feature is unexpected in this study because there is no $n=0$ linear instability present in the system, which is confirmed by eigenvalue calculations~\cite{Popovich2010a}.
 The only linear instability of the system is the
 linear resistive drift wave instability, which requires finite $n$ to provide the phase shift and state variable coupling to drive the waves unstable. Perhaps equally unexpected is the complete
 lack of parallel kinetic energy in the $n=0$ range. The $E_v$ spectrum looks like a traditional linear drift wave spectrum, but does not match the other fields, which is atypical of
@@ -406,7 +407,7 @@ linear drift waves.
 \subsection{Description and Evidence for the Nonlinear Instability}
 
 \begin{figure}
-\includegraphics[width=0.38\textwidth,height=50mm]{nl_instability_diagram}
+\includegraphics[width=3in,height=2.5in]{nl_instability_diagram}
 \hfil
 \caption{Diagram of the nonlinear instability process that drives flute modes.}
 \label{nl_instability_diagram}
@@ -442,13 +443,7 @@ Fourth and finally, the $T_\phi(\vec{k},\vec{k}')$ interaction conservatively tr
 $n \ne 0$ to $n=0$ potential $\phi$ fluctuations in inverse fashion, providing the necessary potential flute structures for the first step.
 
 \begin{figure}
-\includegraphics[width=0.42\textwidth,height=50mm]{density_dynamics}~a)
-\hfil
-\includegraphics[width=0.42\textwidth,height=50mm]{temperature_dynamics}~b)
-\hfil
-\includegraphics[width=0.42\textwidth,height=50mm]{potential_dynamics}~c)
-\hfil
-\includegraphics[width=0.42\textwidth,height=50mm]{parallel_dynamics}~d)
+\includegraphics[]{linear_dynamics}
 \hfil
 \caption{\textbf{a)} The solid curves quantify the energy dynamics of the density potential energy averaged over time during the saturated turbulent phase. The notation $n \pm 1$ represents the
 summation over the $n=1$ and $n=-1$ curves. \textbf{b)} The energy dynamics of the temperature potential energy, \textbf{c)} the perpendicular kinetic energy, and \textbf{d)} the parallel
@@ -473,7 +468,8 @@ be transferred to the parallel current.
 
 Figure~\ref{nc_dynamics_figures}(b) shows the temperature potential energy dynamics. Again flute structures inject energy into the fluctuations, but unlike in the density case, $n = \pm 1$ modes
 dissipate more energy than they inject. Moreover, the small value of $C_t$ reveals that the temperature fluctuations inject only a small amount of energy into the parallel current compared
-to the density fluctuations. Despite the fact that the equilibrium temperature gradient is quite a bit steeper than the density gradient, its free energy is not used efficiently by the waves
+to the density fluctuations. Despite the fact that the equilibrium temperature gradient is nearly as steep as the density gradient at its steepest point, 
+its free energy is not used efficiently by the waves
 in the sense that it is largely dissipated before being transferred to the electrostatic potential. The reason for the difference
 between the density and temperature responses is the extra dissipation routes for the temperature fluctuations, namely, the parallel heat conduction and electron-ion heat exchange.
 One should therefore be careful in assuming that adding free energy sources to an analysis will automatically increase instability drive.
@@ -497,9 +493,7 @@ through this response, although it is much weaker than the density fluctuation r
 
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.40\textwidth,height=50mm]{T_m}~a)
-\hfil
-\includegraphics[width=0.40\textwidth,height=50mm]{T_n}~b)
+\includegraphics[]{nl_dynamics}
 \hfil
 \caption{\textbf{a)} Conservative nonlinear energy transfer functions $T_j(\vec{k},\vec{k}')$ summed over $\vec{k}'$ and $n$. 
 The line labeled $\phi$ represents the function $\sum_{\vec{k}',n} T_\phi(\vec{k},\vec{k}')$,
@@ -535,9 +529,7 @@ $n=0$ potential structures because $Q_\phi=0$. That completes the evidence for t
 \subsection{The Global Energy Injection and Dissipation Picture}
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.45\textwidth,height=50mm]{dEdt_nc}~a)
-\hfil
-\includegraphics[width=0.40\textwidth,height=50mm]{lin_vs_nl_standard}~b)
+\includegraphics[]{dEdt_nc}
 \hfil
 \caption{\textbf{a)} The total spectral nonconservative energy injection $\pdiff{E(\vec{k})}{t} \big|_{NC}$ and
 \textbf{b)} the spectral nonconservative growth rate spectrum $\gamma_{T}(\vec{k})$ of the turbulence 
@@ -575,9 +567,7 @@ for $(n=0, 3<m<45)$. The linear and turbulent spectral injection regions do not 
 
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.40\textwidth,height=50mm]{non0_vs_lin}~a)
-\hfil
-\includegraphics[width=0.40\textwidth,height=50mm]{non0_vs_withzf}~b)
+\includegraphics[]{no_n0_growthrates}
 \hfil
 \caption{\textbf{a)} The turbulent growth rate spectrum $\gamma_T(\vec{k})$ with $n=0$ density and potential components removed from the 
 simulation compared to the linear growth rate spectrum $\gamma_L(\vec{k})$.
@@ -605,7 +595,7 @@ the zonal flow is left intact. The growth rate spectrum of this simulation, show
 dynamics. The zonal flow simply decreases the growth rates by a small amount, causing no change to the qualitative picture. 
 
 \begin{figure}[!htbp]
-\includegraphics[width=0.40\textwidth,height=55mm]{fspec_3}
+\includegraphics[]{spectra_3}
 \hfil
 \caption{Comparison of the frequency spectra. Notice the spectra with $n=0$ components removed is not broadband, but has a clear peak, which is inconsistent with experiment.}
 \label{freq_spectra3}
