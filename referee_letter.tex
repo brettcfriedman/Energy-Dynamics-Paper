@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+%\setlength{\parindent}{0in}
+
+% General Latex  --------------------------------------------------
+\def\beq{\begin{equation}}
+\def\eeq{\end{equation}}
+\def\beqar{\begin{eqnarray}}
+\def\eeqar{\end{eqnarray}}
+\def\nn{\nonumber}
+\def\ol{\overline}
+\def\para{\parallel}
+
+% Operators  ------------------------------------------------------
+\newcommand{\diff}[2]{\frac{d#1}{d#2}}
+\newcommand{\diffs}[2]{\frac{d^2#1}{d#2^2}}
+\newcommand{\pdiff}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\pdiffs}[2]{\frac{\partial^2#1}{\partial#2^2}}
+\newcommand{\pdiffxy}[3]{\frac{\partial^2#1}{\partial#2 \partial#3}}
+\newcommand{\pdt}{\partial_t}
+\newcommand{\pdr}{\partial_r}
+\newcommand{\pdth}{\partial_\theta}
+\newcommand{\pdrr}{\partial^2_r}
+
+\newcommand{\enum}[2]{{#1}\times10^{#2}} % 4.2x10^{3} = \enum{4.2}{3}
+
+\newcommand{\vect}[1]{{\bf #1}}
+%\newcommand{\vect}{\overrightarrow}
+%\newcommand{\vect}{\vec}
+\def\div{\nabla\cdot}
+\def\grad{\nabla}
+\def\curl{\nabla\times}
+\newcommand{\gradpar}{\grad_\parallel}
+\newcommand{\gradperp}{\grad_\perp}
+\newcommand{\gradr}{\grad_r}
+\newcommand{\defeq}{\ensuremath{\stackrel{\text{\tiny def}}{=}}}
+
+\newcommand{\savg}[1]{\left<{#1}\right>}
+\newcommand{\vavg}[1]{\left<{#1}\right>_V}
+\newcommand{\thavg}[1]{\left<{#1}\right>_\theta}
+
+% Variable names  -------------------------------------------------
+\newcommand{\vpar} {v_\parallel}
+\newcommand{\Apar} {A_\parallel}
+\newcommand{\jpar} {j_\parallel}
+\newcommand{\kpar} {k_\parallel}
+\newcommand{\kperp} {k_\perp }
+\newcommand{\vperp} {v_\perp }
+\newcommand{\kthe}{k_\theta}
+
+\newcommand{\Evec}{\ensuremath{\boldsymbol{{\rm E}}}}
+\newcommand{\Bvec}{\ensuremath{\boldsymbol{{\rm B}}}}
+\newcommand{\Jvec}{\ensuremath{\boldsymbol{{\rm J}}}}
+\newcommand{\Fvec}{\ensuremath{\boldsymbol{{\rm F}}}}
+\newcommand{\fvec}{\ensuremath{\boldsymbol{{\rm f}}}}
+\newcommand{\vE}{\ensuremath{\boldsymbol{{\rm v}_{E}}}}
+\newcommand{\bo}{\ensuremath{\boldsymbol{{\rm b}_0}}}
+\newcommand{\bvec}{\ensuremath{\boldsymbol{{\rm b}}}}
+\newcommand{\xvec}{\ensuremath{\boldsymbol{{\rm x}}}}
+\newcommand{\yvec}{\ensuremath{\boldsymbol{{\rm y}}}}
+\newcommand{\zvec}{\ensuremath{\boldsymbol{{\rm z}}}}
+\newcommand{\vvec}{\ensuremath{\boldsymbol{{\rm v}}}}
+\newcommand{\jvec}{\ensuremath{\boldsymbol{{\rm j}}}}
+
+\newcommand{\bxgp}{\bvec\times\gradperp}
+
+\newcommand{\vve}{\ensuremath{\boldsymbol{{\rm v}}_{e}}}
+\newcommand{\vvi}{\ensuremath{\boldsymbol{{\rm v}}_{i}}}
+\newcommand{\vpe}{v_{\parallel e}}
+\newcommand{\vpi}{v_{\parallel i}}
+\newcommand{\vvE}{\ensuremath{\boldsymbol{{\rm v}}_{E}}}
+\newcommand{\vvD}{\ensuremath{\boldsymbol{{\rm v}}_{D}}}
+
+\newcommand{\nuei}{\nu_{ei}}
+\newcommand{\nuii}{\nu_{ii}}
+\newcommand{\nue}{\nu_{e}}
+\newcommand{\nuen}{\nu_{en}}
+\newcommand{\nuin}{\nu_{in}}
+\newcommand{\kpe}{\kappa_{\parallel e}}
+
+\newcommand{\rs}{\rho_{s}}
+\newcommand{\ri}{\rho_{i}}
+\newcommand{\wci}{\Omega_{i}}
+\newcommand{\wcix}{\Omega_{ix}}
+\newcommand{\wce}{\Omega_{e}}
+\newcommand{\tomega}{\tilde\omega}
+\newcommand{\Isat}{I_{\rm sat}}
+\newcommand{\fmie}{\frac{m_i}{m_e}}
+\newcommand{\fmei}{\frac{m_e}{m_i}}
+
+
+% Often used dimensions
+\newcommand{\cm}{\rm cm}
+\newcommand{\mm}{\rm mm}
+\newcommand{\cmn}{{\rm cm}^{-3}}
+\newcommand{\mn}{{\rm m}^{-3}}
+\newcommand{\eV}{\rm eV}
+\newcommand{\G}{\rm G}
+\newcommand{\T}{\rm T}
+
+
+
+\begin{document}
+
+
+Response to the referee's comments \\ \\ 
+
+1. The nonlinear instability reaches an equal drive level as the linear instability when the RMS fluctuation level is about 2-3$\%$ of the equilibrium, making it about $1/5$ 
+of the fluctuation value during saturation. As the fluctuation amplitude passes this value, the nonlinear instability becomes dominant. We have added some text on pages 3 and
+9 stating this conclusion.
+
+2. We have indicated in the text that the radial boundary locations used in the simulation correspond to the locations in the experiment where the fluctuations die away to only
+a few percent of the equilibrium values. This should justify use of Dirichlet boundary conditions at these points.
+
+3. We added different line styles or markers on all line plots so that they can be distinguished without color.
+
+4. Unfortunately, we do not believe that we can accurately measure the axial wavenumber $n$ spectrum in the experiment. In order to experimentally measure a wavenumber spectrum, one must
+use multiple probes, say two of them, and observe the correlation between the two. To get the axial wavenumber spectrum, one must align the two probes along a magnetic field line.
+This is extremely difficult to do in practice, and any misalignment will cause the correlation characteristics to be dominated by the perpendicular misalignment since the perpendicular
+wavelength is so much smaller than the parallel one. We realize that such a measurement would provide the greatest
+evidence for the presence of the nonlinear instability in the experiment. But since such a measurement is not possible, we have had to rely on more indirect evidence, such as that
+discussed in Section V.
+
+5. We acknowledge that there is an area between 15-20 cm where the fluctuation levels disagree at a higher level than elsewhere. We believe that this discrepency is due to the smoothed
+profiles that we use in the simulation. It is clear that at other radii, the fluctuation level of the experiment is bumpier than that of the simulation, and this is also a result
+of a bumpier experimental profile. We did not work on fine tuning our simulation profiles to achieve better validation because validation wasn't the primary intent of this study,
+and we felt that the agreement between simulation and experiment was good enough to proceed with the energetics analysis.
+
+6. The zonal density and temperature are identically zero due to the density and temperature sources which subtract out the $m=0$ component of these fluctuations. The zonal flow has an energy
+of $1.4 \times 10^{-4}$. I have indicated these points in the caption of Figure 4.
+
+7. The original sentence has been split into two sentences.
+
+8. We have indicated the magnitude of the source in the text.
+
+9. This point is made two paragraphs later during the discussion of Figure 6d. But we have added a small clarification of this point near the end of the paragraph that discusses Figure 6d.
+
+10. This point is now restated in the conclusion.
+
+11. Fixed the author initials.
+
+12. Removed the redundant ``and''s.
+
+
+Additional comment: In Fig 2a and Fig 10, we made an error in calculating the amplitude of the power spectra. We have corrected the error by using Parseval's Theorem to correctly
+weight the spectra. The new figures do not change any of the conclusions of the paper and no text needed to be changed as a result.
+
+
+\end{document}
