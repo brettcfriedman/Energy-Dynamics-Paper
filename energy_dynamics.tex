@@ -135,7 +135,7 @@ Through nonlinear axial wavenumber transfer to $k_\parallel \ne 0$ fluctuations,
 which provides the requisite energy transfer channel from density to potential fluctuations as well as the
 phase shift that causes instability. The turbulence characteristics in the simulations agree remarkably well with experiment. When the nonlinear instability is artificially 
 removed from the system through suppressing $k_\parallel=0$ modes, the turbulence develops a coherent frequency spectrum which is inconsistent
-with experimental data. 
+with experimental data. This indicates the importance of the nonlinear instability in producing experimentally consistent turbulence.
 \end{abstract}
 
 \maketitle
@@ -195,8 +195,8 @@ although electron temperature fluctuations were not included in those studies.
 The equations are developed with Bohm normalizations: lengths are
 normalized to the ion sound gyroradius $\rho_s$, times to the ion
 cyclotron time $\omega_{ci}^{-1}$, velocities to the sound speed $c_s$, densities to the equilibrium peak density, and electron
-temperatures and potentials to the equilibrium peak electron temperature. All of these values are constants (not functions of radius) and the physical quantities used to calculate 
-these constants are the following: the magnetic field is $1$ kG, the ion unit mass is $4$, the peak density is $2.86 \times 10^{12}$ cm$^{-3}$, and the peak electron temperature
+temperatures and potentials to the equilibrium peak electron temperature. These normalizations are constants (not functions of radius) and are calculated from these reference values:
+the magnetic field is $1$ kG, the ion unit mass is $4$, the peak density is $2.86 \times 10^{12}$ cm$^{-3}$, and the peak electron temperature
 is $6$ eV. The equations are:
 
 \beqar
@@ -211,7 +211,7 @@ is $6$ eV. The equations are:
 - \frac{2 m_e}{m_i} \nue T_e  + \mu_T \gradperp^2 T_e +  S_T + \{\phi,T_e\}.
 \eeqar
 
-In these equations, $\mu_N$, $\mu_T$, and $\mu_\phi$ are artificial diffusion and viscosity coefficients used for sub-grid dissipation. They are large enough to allow saturation
+In these equations, $\mu_N$, $\mu_T$, and $\mu_\phi$ are artificial diffusion and viscosity coefficients used for subgrid dissipation. They are large enough to allow saturation
 and grid convergence~\cite{friedman2012}, but small enough to allow for turbulence to develop. In the simulations, they are all given the same value of $1.25 \times 10^{-3}$ in Bohm-normalized units. 
 This is the only free parameter in the simulations. All other parameters such as the electron collisionality $\nue$, ion-neutral
 collisionality $\nuin$, parallel electron thermal conductivity $\kpe$, and mass ratio $\fmie$ are calculated from the experimental parameters.
@@ -225,7 +225,7 @@ The simulations use periodic boundary conditions in the axial ($z$) direction an
 conditions in the radial ($r$) direction for the fluctuating quantities. 
 
 Simulations also use density and temperature sources ($S_n$ and $S_T$) in order to keep the equilibrium profiles from relaxing away from their experimental shapes. 
-These sources subtract out the azimuthal averages ($m=0$ component of the density and temperature fluctuations) at each time step. 
+These sources suppress the azimuthal averages ($m=0$ component of the density and temperature fluctuations) at each time step. 
 The azimuthal average of the potential $\phi$ is allowed to evolve in
 the simulation, allowing zonal flows to arise.
 The parallel current, which is often found explicitly in these equations is replaced here by $J_\para = - N_0 \vpe$. \\
@@ -265,10 +265,12 @@ E = \frac{1}{2} \int_V  (N^2 + \frac{3}{2} T_e^2 + \frac{m_e}{m_i} \vpe^2 + N_0 
 The $N^2$ contribution is the potential energy due to density fluctuations, $\frac{3}{2} T_e^2$ is the electron temperature fluctuation potential energy,
 $\frac{m_e}{m_i} \vpe^2$ is the parallel electron kinetic energy, and $N_0 (\gradperp \phi)^2$ is the $E \times B$ perpendicular kinetic energy.
 These energy-like expressions are defined in this way so that they are conserved individually by their respective advective nonlinearities. While the physical energy contains
-extra factors of $N_0$ and $T_{e0}$, the physical energy does not preserve the property of conservative nonlinearities of equations \ref{ni_eq}-\ref{te_eq} and therefore produces
-a more complicated analysis. Analyzing an energy-like expression such as that in equation \ref{energy_eq}, however, can be just as illuminating if not more so than analyzing the physical energy.
+extra factors of $N_0$ and $T_{e0}$, the physical energy does not preserve the property of conservative nonlinearities of equations~\ref{ni_eq}-\ref{te_eq} and therefore produces
+a more complicated analysis. Analyzing an energy-like expression such as that in equation~\ref{energy_eq}, however, can be just as illuminating, and in this case simpler,
+than analyzing the physical energy.
+The expression in Equation~\ref{energy_eq} will henceforth be referred to simply as the energy.
 
-Furthermore, it is often most instructive to analyze the spectral energy dynamics rather than the total energy dynamics. 
+Furthermore, it is often most instructive to analyze the spectrally decomposed energy dynamics. 
 To do this, each fluid field $(N,T_e,\vpe,\phi)$ at a given time is Fourier decomposed as 
 $F(r,\theta,z) = \sum_{\vec{k}} f_{\vec{k}}(r) e^{i (m \theta + k_z z )}$,
 where the subscript $\vec{k}$ represents the spectral wavenumbers, $(m,n)$. 
@@ -655,7 +657,7 @@ turbulence mechanisms.
 \begin{acknowledgments}
 This research was performed under appointment to the Fusion Energy Sciences Fellowship Program administered by Oak Ridge Institute for
 Science and Education under a contract between the U.S. Department of Energy and the Oak Ridge Associated Universities. 
-We would also like to thank Professor Paul Terry and Dr. Ilon Joseph for many useful discussions on this topic.
+We would also like to thank Prof. Paul Terry and Dr. Ilon Joseph for many useful discussions on this topic.
 \end{acknowledgments}
 
 
