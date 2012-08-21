@@ -103,105 +103,98 @@
 \begin{document}
 
 
-Response to the referee's comments \\ \\ 
+Response to the referee's comments \\ 
 
 We thank the referee for the thoughtful review of our paper and noting that we present a ``thorough and compelling analysis'' of a nonlinear instability. We believe that the referee's comments will help
 improve our paper by making us provide some important details that we had left out at first. The following are our responses to the referee's comments. \\
 
-Comment 1:   On page 3, the paper states that the “nonlinear drift wave instability dominates when
-the fluctuation amplitude becomes large enough”. Can the authors provide an estimate of the threshold? \\
+{\noindent \itshape  On page 3, the paper states that the “nonlinear drift wave instability dominates when
+the fluctuation amplitude becomes large enough”. Can the authors provide an estimate of the threshold? }\\
 
 Response: The nonlinear instability takes over when the ratio $Q_n(n=0)/Q_n(n=1)$ becomes 1, or larger. This is when pumping of net energy from the $n=1$ drift waves
 into the $n=0$ density fluctuations reverses direction. According to the simulations, this happens at RMS fluctuation level $\delta n/N_0$ as small as $2-3\%$;
 in saturated turbulence $\delta n/N_0 \sim 10 \%$ and the nonlinear drive completely dominates.
-We agree with the referee that this is important information and have added some text on pages 3 and 9 stating these points. \\
+We agree with the referee that this is important information and have added some text on pages 3 and 9 stating these points. }\\
 
-Comment 2:    Dirichlet boundary conditions are used for the fluctuations at the radial boundaries r = 12 and 40 cm. The authors should indicate how the boundary values are chosen. \\
+{\noindent \itshape    Dirichlet boundary conditions are used for the fluctuations at the radial boundaries r = 12 and 40 cm. The authors should indicate how the boundary values are chosen. }\\
 
-Response: We have indicated in the text on page 4 that the radial boundary locations used in the simulation correspond to the locations in the experiment where the fluctuations die away to only
-a few percent of the equilibrium values as seen in Figure 2c. This should justify use of Dirichlet boundary conditions at these points. \\
+{\noindent We have indicated in the text on page 4 that the radial boundary locations used in the simulation correspond to the locations in the experiment where the fluctuations die away to only
+a few percent of the equilibrium values as seen in Figure 2c. This should justify use of Dirichlet boundary conditions at these points. }\\
 
-Comment 3:  In Figure 2, and other figures, the traces are hard to distinguish without color. Unless all figures will be rendered in color in the print version, the traces should be better
-distinguished. \\
+{\noindent \itshape  In Figure 2, and other figures, the traces are hard to distinguish without color. Unless all figures will be rendered in color in the print version, the traces should be better
+distinguished. }\\
 
-Response: We do not wish for the figures to be rendered in color in the print version, so we have added different line styles or markers on all line plots so that they can be 
-distinguished without color. \\
+{\noindent We do not wish for the figures to be rendered in color in the print version, so we have added different line styles or markers on all line plots so that they can be 
+distinguished without color. }\\
 
-Comment 4:   Figure 2 gives the only comparison between experiment and simulation. The n = 0
+{\noindent \itshape   Figure 2 gives the only comparison between experiment and simulation. The n = 0
 fluctuations are said to dominate at various places in the paper, both for simulation and
 experiment. Since this is an important point, it would be helpful if the n spectrum for a
 fixed value of m were shown as a part (d) of the figure, again with numerical and
-experimental traces. \\
+experimental traces. }\\
 
-Response: The referee is right to point out that a comparison of the axial wavenumber spectrum between simulation and experiment would significantly enhance our evidence for our conclusion.
-Unfortunately, we do not believe that we can accurately measure the axial wavenumber $n$ spectrum in the experiment. In order to experimentally measure a wavenumber spectrum, one must
-use multiple probes, say two of them, and observe the correlation between the two. To get the axial wavenumber spectrum, one must align the two probes along a magnetic field line.
-This is extremely difficult to do in practice, and any misalignment will cause the correlation characteristics to be dominated by the perpendicular misalignment since the perpendicular
-wavelength is so much smaller than the parallel one. We realize that such a measurement would provide the greatest
+{\noindent The referee is right to point out that a comparison of the axial wavenumber spectrum between simulation and experiment would significantly enhance our evidence for our conclusion.  Unfortunately, we do not have experimental measurements of the axial wavenumber spectrum in the experiment. This is extremely difficult to do in a machine like LAPD where the ratio between the axial and perpendicular wavenumber is so small.  In theory a measurement of axial wavenumber can be accomplished by carefully aligning two probes along the magnetic field and detecting a phase shift.  There are two problems with this: (1) Any slight misalignment of the two probes will introduce a phase shift due to the perpendicular structure of the turbulence.  As the perpendicular wavenumber is much much larger than the parallel, this is a significant problem when trying to distinguish between parallel wavelengths of 34m (fundamental mode in LAPD) versus >34m (something that might suggest n=0 dominance).  (2) These modes should be standing waves along the magnetic field:  there should be no preferred direction of propagation.  So the standard approach of measuring phase shift along the magnetic field between two probes should be ineffective unless there is a broken symmetry (which could happen due to the asymmetry in the two ends of LAPD (one has the plasma source, the other is a mesh door).  Having said all of this, we do realize that such a measurement would provide the greatest
 evidence for the presence of the nonlinear instability in the experiment and it is a goal of ours to find a way to do this in the future. 
-But since such a measurement is not likely to be accurate at the moment, we have had to rely on more indirect evidence, such as that discussed in Section V. \\
+But since such a measurement is not likely to be accurate at the moment, we have had to rely on more indirect evidence, such as that discussed in Section V. }\\
    
 
-Comment 5: In Fig. 2 (c) the simulation and experiment track each other reasonably well for $r > 20$
+{\noindent \itshape In Fig. 2 (c) the simulation and experiment track each other reasonably well for $r > 20$
 cm. For $r < 20$ cm the two traces have different behavior. In light of the paper’s
 statement that “the simulation reproduces these characteristics of experimental
 measurements with rather good qualitative and quantitative accuracy”, the differences for
-$r < 20$ cm should be explained. \\
+$r < 20$ cm should be explained. }\\
 
-Response: We acknowledge that there is an area between 15-20 cm where the fluctuation levels disagree at a higher level than elsewhere. We believe that this discrepency is due to the smoothed
+{\noindent We acknowledge that there is an area between 15-20 cm where the fluctuation levels disagree at a higher level than elsewhere. We believe that this discrepency is due to the smoothed
 profiles that we use in the simulation. It is clear that at other radii, the fluctuation level of the experiment is bumpier than that of the simulation, and this is also a result
 of a bumpier experimental profile. We did not work on fine tuning our simulation profiles to achieve better validation because validation wasn't the primary intent of this study,
 and we felt that the agreement between simulation and experiment was good enough to proceed with the energetics analysis. In this respect, we have not quantified the agreement between 
 simulation and experiment and leave it to the reader to use Fig. 2 to qualify our statements concerning agreement. We also have published papers that go into more detail about the level
-of agreement between our simulations and experiment. \\
+of agreement between our simulations and experiment. }\\
 
-Comment 6:   I tried to determine the magnitude of the zonal flow, zonal density, and zonal
+{\noindent \itshape   I tried to determine the magnitude of the zonal flow, zonal density, and zonal
 temperature from Fig. 4, but found it difficult to reliably extract that information from the
 color scale for the narrow slice that represents m = 0. This is especially true if one is
 looking at a black and white rendition of the figure. On page 18, where zonal flows are
-discussed, it would be helpful to have an idea how large the zonal flow is. \\
+discussed, it would be helpful to have an idea how large the zonal flow is. }\\
 
-Response: The zonal density and temperature are identically zero due to the density and temperature sources which subtract out the $m=0$ component of these fluctuations. The zonal flow has an energy
-of $1.4 \times 10^{-4}$. We have indicated these points in the caption of Figure 4. \\
+{\noindent The zonal density and temperature are identically zero due to the density and temperature sources which subtract out the $m=0$ component of these fluctuations. The zonal flow has an energy
+of $1.4 \times 10^{-4}$. We have indicated these points in the caption of Figure 4. }\\
 
-Comment 7:   The last sentence of page 11 could profitably be split into two easier-to-digest sentences. \\
+{\noindent \itshape   The last sentence of page 11 could profitably be split into two easier-to-digest sentences. }\\
 
-Response: This is true, and accordingly the original sentence has been split into two sentences. \\
+{\noindent This is true, and accordingly the original sentence has been split into two sentences. }\\
 
-Comment 8:   On page 12 the paper states that the dissipation from the source is not shown in the
-figure but is “rather large”. This magnitude of the dissipation should be quantified. \\
+{\noindent \itshape   On page 12 the paper states that the dissipation from the source is not shown in the
+figure but is “rather large”. This magnitude of the dissipation should be quantified. }\\
 
-Response: This is an important part of the energy dissipation that we should have quantified in the text. So now we have indicated the magnitude of the source in the text on page 13. \\
+{\noindent This is an important part of the energy dissipation that we should have quantified in the text. So now we have indicated the magnitude of the source in the text on page 13. }\\
 
-Comment 9:   In the sentence that starts at the bottom of page 12 it would be helpful to indicate that
-small value of $C_t$ is something that is demonstrated in part (d) of the figure. \\
+{\noindent \itshape   In the sentence that starts at the bottom of page 12 it would be helpful to indicate that
+small value of $C_t$ is something that is demonstrated in part (d) of the figure. }\\
 
-Response: This point is made two paragraphs later during the discussion of Figure 6d. But we have added a small clarification of this point near the end of the paragraph that discusses Figure 6d. \\
+{\noindent This point is made two paragraphs later during the discussion of Figure 6d. But we have added a small clarification of this point near the end of the paragraph that discusses Figure 6d. }\\
 
-Comment 10:   Although it is said nicely somewhere earlier in the paper, it would be appropriate to
+{\noindent \itshape   Although it is said nicely somewhere earlier in the paper, it would be appropriate to
 restate in the conclusions that the analysis of the paper shows that n = 0 is excited by
-nonlinear instability and not conservative transfer. \\
+nonlinear instability and not conservative transfer. }\\
 
-Response: We agree with the referee that this is a very important point that should certainly be in the conclusion. So we have now restated it in the conclusion. \\
+{\noindent We agree with the referee that this is a very important point that should certainly be in the conclusion. So we have now restated it in the conclusion. }\\
 
-Comment 11:  In the list of references, the same convention for author’s initials as used in the cited
+{\noindent \itshape  In the list of references, the same convention for author’s initials as used in the cited
 papers should be followed, i.e., if the article cited uses two initials for an author, both
-initials should be included. \\
+initials should be included. }\\
 
-Response: We thank the referee for catching this. Now we have fixed and reviewed the author initials in all citations. \\
+{\noindent We thank the referee for catching this. Now we have fixed and reviewed the author initials in all citations. }\\
 
-Comment 12: In references 28 and 29 the redundant “and” should be removed. \\
+{\noindent \itshape In references 28 and 29 the redundant “and” should be removed. }\\
 
-Response: We removed the redundant ``and''s. \\
+{\noindent We removed the redundant ``and''s. }\\
 
 
 Additional author comment 1: After submission, we discovered a small error in our comparison of the amplitudes of the power spectra in Fig 2a and Fig 10. 
-We have corrected the error by using Parseval's Theorem to correctly weight the spectra. The new figures do not change any of the conclusions of the paper and no text needed to be changed as a result. \\
+We have corrected the error by using Parseval's Theorem to correctly weight the spectra. The new figures do not change any of the conclusions of the paper and no text needed to be changed as a result. }\\
 
-Additional author comment 2: After submission, we received a comment and had an interesting conversation on the normalizations that we used in our energy equation. As a result of this discussion,
-we have added a few lines of text to the end of Section III which clarifies our position in using the normalizations that we did. \\
+Additional author comment 2: After submission, we received interesting feedback on our preprint which suggested that alternative normalizations could be used in our energy equation. As a result of this discussion, we have added a few lines of text to the end of Section III which clarifies our position in using the normalizations reported in the manuscript. \\
 
-Sincerely,
-Brett Friedman
 
 \end{document}
