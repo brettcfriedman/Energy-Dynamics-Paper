@@ -254,7 +254,7 @@ this simulation is based. The simulation reproduces these characteristics of exp
 \section{Energetics Machinery}
 \label{sec_energetics_machinery}
 
-In order to perform an energy dynamics analysis on the simulation, expressions for the energy and energy evolution must be derived from equations \ref{ni_eq}-\ref{te_eq}.
+In order to perform an energy dynamics analysis on the simulation, expressions for the energy and energy evolution must be derived from Eqs. \ref{ni_eq}-\ref{te_eq}.
 To start, an expression for the normalized energy of the wave fluctuations in the drift wave model is defined as:
 
 \beq
@@ -265,10 +265,10 @@ E = \frac{1}{2} \int_V  (N^2 + \frac{3}{2} T_e^2 + \frac{m_e}{m_i} \vpe^2 + N_0 
 The $N^2$ contribution is the potential energy due to density fluctuations, $\frac{3}{2} T_e^2$ is the electron temperature fluctuation potential energy,
 $\frac{m_e}{m_i} \vpe^2$ is the parallel electron kinetic energy, and $N_0 (\gradperp \phi)^2$ is the $E \times B$ perpendicular kinetic energy.
 These energy-like expressions are defined in this way so that they are conserved individually by their respective advective nonlinearities. While the physical energy contains
-extra factors of $N_0$ and $T_{e0}$, the physical energy does not preserve the property of conservative nonlinearities of equations~\ref{ni_eq}-\ref{te_eq} and therefore produces
-a more complicated analysis. Analyzing an energy-like expression such as that in equation~\ref{energy_eq}, however, can be just as illuminating, and in this case simpler,
+extra factors of $N_0$ and $T_{e0}$, the physical energy does not preserve the property of conservative nonlinearities of Eqs.~\ref{ni_eq}-\ref{te_eq} and therefore produces
+a more complicated analysis. Analyzing an energy-like expression such as that in Eq.~\ref{energy_eq}, however, can be just as illuminating, and in this case simpler,
 than analyzing the physical energy.
-The expression in Equation~\ref{energy_eq} will henceforth be referred to simply as the energy.
+The expression in Eq.~\ref{energy_eq} will henceforth be referred to simply as the energy.
 
 Furthermore, it is often most instructive to analyze the spectrally decomposed energy dynamics. 
 To do this, each fluid field $(N,T_e,\vpe,\phi)$ at a given time is Fourier decomposed as 
@@ -293,14 +293,14 @@ The energy evolution for each Fourier mode of each field has the form:
 
 The index $j$ stands for each field, ($n,t,v,\phi$), and the sum over $j$ gives the total energy evolution. 
 Note that with the conventions used, the symbol $n$ denotes both the axial mode number as
-well as the Fourier coefficient of the density fluctuation. The differences should be clear in context. The derivation of equation~\ref{dEdt_j} 
+well as the Fourier coefficient of the density fluctuation. The differences should be clear in context. The derivation of Eq.~\ref{dEdt_j} 
 is given in the Appendix along with the full expressions for each of the parts. $T_{j}(\vec{k},\vec{k}')$ is the nonlinear energy transfer function that comes from the advective
 nonlinearities.  It describes the nonlinear energy transfer rate of modes $\vec{k}'=(m',n')$ and $\vec{k}-\vec{k}'=(m-m',n-n')$ to the mode $\vec{k}=(m,n)$. 
 In other words, a positive value of $T_{j}(\vec{k},\vec{k}')$ indicates that fluctuations
 at wavenumber $\vec{k}$ gain energy from gradient fluctuations at wavenumber $\vec{k}'$ and flow fluctuations at wavenumber $\vec{k}-\vec{k}'$.
-When summed over $\vec{k}'$ as in equation~\ref{dEdt_j}, the result is the total
+When summed over $\vec{k}'$ as in Eq.~\ref{dEdt_j}, the result is the total
 nonlinear energy transfer into mode $\vec{k}$. 
-Note that $\sum_{\vec{k},\vec{k}'} T_{j}(\vec{k},\vec{k}') = 0$ because the nonlinearities conserve energy individually in each of equations~\ref{ni_eq}-\ref{te_eq}.
+Note that $\sum_{\vec{k},\vec{k}'} T_{j}(\vec{k},\vec{k}') = 0$ because the nonlinearities conserve energy individually in each of Eqs.~\ref{ni_eq}-\ref{te_eq}.
 This is easily proven by the following identity:
 
 \beq
@@ -319,8 +319,8 @@ scheme for the advective nonlinearities to reflect this analytic property of the
 However, most common numerical advection schemes do not conserve energy for finite grid spacing. Therefore, an Arakawa advection scheme~\cite{arakawa1966} that conserves 
 energy of the advected quantity is used for the nonlinear advection terms in the simulations.
 
-The linear terms in equations \ref{ni_eq}-\ref{te_eq} do not conserve energy individually or as a whole. The linear terms are broken up into three contributions in Eqn.~\ref{dEdt_j}.
-$D_{j}(\vec{k})$ represents nonconservative energy dissipation due to collisions, artificial diffusion and viscosity, and the purely dissipative density and temperature sources.
+The linear terms in Eqs. \ref{ni_eq}-\ref{te_eq} do not conserve energy individually or as a whole. The linear terms are broken up into three contributions in Eqn.~\ref{dEdt_j}.
+$D_{j}(\vec{k})$ represents nonconservative energy dissipation due to collisions, artificial diffusion and viscosity, and the density and temperature sources.
 Each contribution to $D_j(\vec{k})$ is negative, and the exact expressions are given in the Appendix. 
 $C_j(\vec{k})$ contains the linear terms dubbed ``transfer channels''~\cite{scott2002}. They are rewritten here:
 
@@ -363,7 +363,7 @@ at each $\vec{k}$. $Q_t(\vec{k})$ is completely analogous to $Q_n(\vec{k})$ but 
 $Q_v(\vec{k})$ is parallel kinetic energy extraction or dissipation.
 The sources of these terms are the equilibrium gradients, which is evident because if the profiles
 were flat ($N_0=T_{e0}=1$), all $Q(\vec{k})$ would vanish.
-Moreover, the particular normalization of equations~\ref{ni_eq}-\ref{te_eq} combined with the choice of energy definition (equation~\ref{energy_eq}) causes the non-zero $Q_v(\vec{k})$.
+Moreover, the particular normalization of Eqs.~\ref{ni_eq}-\ref{te_eq} combined with the choice of energy definition (Eq.~\ref{energy_eq}) causes the non-zero $Q_v(\vec{k})$.
 The energy dynamics of the physical energy does not have a finite $Q_v(\vec{k})$. However, with the energy-like expression analyzed here $Q_v(\vec{k})$ is small compared to the 
 parallel velocity dissipation $D_v(\vec{k})$, meaning that there is no net energy entering the system directly through the parallel velocity as expected. 
 The energy expression used here is therefore a good proxy for the physical energy with the added benefit that the expression used here conserves the nonlinearities.
@@ -395,12 +395,12 @@ Figure~\ref{time_evolution} shows the time evolution of the total energy of the 
 exponentially due to the linear drift wave instability until the energy level reaches about $0.01$, where the energy is fairly equally divided between $n=0$ and $n= \pm 1$ modes. 
 Then, the nonlinear instability takes over and the fluctuation energy continues to grow
 until reaching saturation. All analysis shown below is done by time averaging over the saturated (turbulent) stage.
-The turbulent spectral energy, defined in equation~\ref{E_k} is shown in Fig.~\ref{energy_figures}. The energy is broken up into its different types (e.g. perpendicular kinetic energy: $E_\phi$).
+The turbulent spectral energy, defined in Eq.~\ref{E_k} is shown in Fig.~\ref{energy_figures}. The energy is broken up into its different types (e.g. perpendicular kinetic energy: $E_\phi$).
 There are a few clear nonlinear properties
 seen in these figures. The first is that the energy is located in different spectral regions for the different energy types. This has to be a nonlinear effect because the linear eigenmodes
 are Fourier modes in the azimuthal and axial directions and all fields grow at the same rate for an eigenmode. 
 Another property unexpected from linear stability analysis is that most of the potential and perpendicular kinetic energy ($E_n$, $E_t$, and $E_\phi$) is contained in $n=0$ ($k_\para = 0$) 
-structures, which are often called flute modes. Previous studies pointed out this flute mode dominance in LAPD simulations~\cite{rogers2010,Umansky2011}. One of these studies~\cite{rogers2010},
+structures, which are often called flute modes. Previous studies pointed out this flute mode dominance in LAPD simulations~\cite{rogers2010,Umansky2011}. The study by Rogers et. al.~\cite{rogers2010},
 however, used a momentum source that produced a large radial electric field, possibly leading to a dominating Kelvin-Helmoltz instability at $k_\para = 0$.
 Such a feature is unexpected in this study because there is no $n=0$ linear instability present in the system, which is confirmed by eigenvalue calculations~\cite{Popovich2010a}.
 The only linear instability of the system is the
@@ -430,7 +430,7 @@ nonlinear instability as has been reported in previous simulations of
 plasma edge turbulence~\cite{biskamp1995,drake1995}. 
 This nonlinear instability is a multi-step process that is outlined in Fig.~\ref{nl_instability_diagram}.
 In the first step, $n=0$ density and potential fluctuations \emph{nonconservatively} draw energy from the equilibrium density gradient as prescribed 
-by $Q_n(m,n=0)$ defined in equation~\ref{Qnk}, and feed
+by $Q_n(m,n=0)$ defined in Eq.~\ref{Qnk}, and feed
 this energy into the $n=0$ density fluctuations only. The nonconservative linear terms, after all, can only inject, dissipate, or transfer energy at one wavenumber at a time, so it takes
 $n=0$ fluctuations to nonconservatively inject energy into $n=0$
 fluctuations. Note also that the temperature fluctuations work in the same way as the density fluctuations, and one could replace $n(m,n)$ (the spectral density component)
@@ -515,10 +515,10 @@ which is a function of $m$. The line labeled $\sum_j$ is the total energy transf
 
 
 Steps 2 and 4 in Fig.~\ref{nl_instability_diagram} come not from the nonconservative linear terms in the equations, but from the conservative nonlinear advective terms.
-The interactions described by the advective nonlinearities are in the nonlinear transfer functions: $T_{j}(\vec{k},\vec{k}')$ in equation~\ref{dEdt_j}.
+The interactions described by the advective nonlinearities are in the nonlinear transfer functions: $T_{j}(\vec{k},\vec{k}')$ in Eq.~\ref{dEdt_j}.
 It is difficult to study the $T_{j}(\vec{k},\vec{k}')$ functions because they are four dimensional functions of $(m,n,n',m')$, 
 which makes visualization challenging. It is therefore convenient to sum over various transfers or look at specific wavenumber transfers of interest. The most easily decipherable
-results that compliment the results of Fig.~\ref{nc_dynamics_figures} are shown in Fig.~\ref{conservative_transfers}. First, Fig.~\ref{conservative_transfers}(a) sums the transfer functions over
+results that complement the results of Fig.~\ref{nc_dynamics_figures} are shown in Fig.~\ref{conservative_transfers}. First, Fig.~\ref{conservative_transfers}(a) sums the transfer functions over
 $(n,m',n')$, leaving only a function of $m$, which illustrates the aggregate azimuthal mode
 number transfers. Note that the sum of each individual curve over $m$ is zero because the nonlinearities are conservative. Positive values in Fig.~\ref{conservative_transfers}(a)
 indicate energy transfer into structures with azimuthal mode number $m$, while negative values indicate energy transfer out of structures with corresponding mode number $m$. 
@@ -545,7 +545,7 @@ $n=0$ potential structures because $Q_\phi=0$. That completes the evidence for t
 \caption{\textbf{a)} The total spectral nonconservative energy injection $\pdiff{E(\vec{k})}{t} \big|_{NC}$ and
 \textbf{b)} the spectral nonconservative growth rate spectrum $\gamma_{T}(\vec{k})$ of the turbulence 
 compared to the linear growth rate spectrum, $\gamma_L(\vec{k})$. 
-The solid lines represent $\gamma_{T}(\vec{k})$ which is calculated using equation~\ref{gamma_def} averaged over the saturated turbulent phase, 
+The solid lines represent $\gamma_{T}(\vec{k})$ which is calculated using Eq.~\ref{gamma_def} averaged over the saturated turbulent phase, 
 while the dashed lines represent $\gamma_L(\vec{k})$ and are calculated with the same equation using the linear phase of the simulation.}
 \label{dEdt_tot_fig}
 \end{figure}
@@ -569,7 +569,7 @@ The growth rates are calculated using:
 \gamma(\vec{k}) = \left( \sum_j Q_j(\vec{k}) + C_j(\vec{k}) + D_j(\vec{k}) \right)/\left( 2 \sum_j E_j(\vec{k}) \right).
 \eeq
 
-The turbulent growth rate spectrum, simply means that equation~\ref{gamma_def} is calculated using the terms from the saturated turbulent phase of the simulation.
+The turbulent growth rate spectrum, simply means that Eq.~\ref{gamma_def} is calculated using the terms from the saturated turbulent phase of the simulation.
 Note that the linear growth rate is positive for $(n=-1, 35<m<95)$ and negative everywhere else. The turbulent growth rate is positive only
 for $(n=0, 3<m<45)$. The linear and turbulent spectral injection regions do not even overlap. Seemingly, the linear physics is completely washed out in the turbulent state. 
 
@@ -620,11 +620,10 @@ is that the turbulence of the simulation with the $n=0$ components removed becom
 frequency spectrum, which is shown in
 Fig.~\ref{freq_spectra3} compared with the experimental spectra and
 the spectra of the standard nonlinear-instability-dominated
-simulation. While the standard simulation with the $n=0$ modes compare
-well with experimental data, 
-the clear peak in the spectra of the simulation with no $n=0$ is
-inconsistent with experiment.  This indicates that something in the standard simulation -- possibly
-the nonlinear instability -- is important for reproducing experimentally relevant turbulence. A more direct test with realistic axial boundary conditions is left for a future study.
+simulation. While the standard simulation with the $n=0$ modes retained compares
+well with experimental data, the spectrum of the simulation with $n=0$ modes removed does not. It is not broadband, having a large peak, which is
+inconsistent with experimental spectrum.  Apparently the $n=0$ modes and the nonlinear instability are important for reproducing experimentally relevant turbulence. 
+A more direct test with realistic axial boundary conditions is left for a future study.
 
 
 \section{Conclusion}
@@ -667,7 +666,7 @@ We would also like to thank Prof. Paul Terry and Dr. Ilon Joseph for many useful
 
 \section{Explicit Calculation of the Energy Evolution of a Fourier Mode}
 
-The energy evolution for each Fourier mode can be obtained by Fourier decomposing each of equations \ref{ni_eq} - \ref{te_eq}
+The energy evolution for each Fourier mode can be obtained by Fourier decomposing each of Eqs. \ref{ni_eq} - \ref{te_eq}
 and then multiplying the density, electron parallel velocity, vorticity, and electron temperature equations by the complex conjugates of the 
 density, velocity, potential, and temperature respectively, and integrating over space.
 Adding the resulting equations gives the energy evolution of each Fourier mode.
@@ -689,7 +688,7 @@ Similar decompositions are used for $\vpe$ and $\phi$. The density source is azi
 S_N(r,z,t) = \sum_{k_z} S_{N k_z}(r,t) e^{i k_z z}.
 \eeq
 
-Substituting this decomposition into equation \ref{ni_eq} gives:
+Substituting this decomposition into Eq. \ref{ni_eq} gives:
 
 \beqar
 \label{density_eq_fourier}
@@ -735,8 +734,8 @@ T_n(\vec{k},\vec{k}') & = & Re \left\{ \left< \frac{1}{r} \left( i m' n_{\vec{k}
 \eeqar
 
 $Q_n(\vec{k})$ is the energy injection, $C_n(\vec{k})$ is the transfer channel, $D_n(\vec{k})$ is dissipation, and $T_n(\vec{k},\vec{k}')$ is spectral energy transfer.
-The same type of procedure may be applied to equations~\ref{ve_eq}-\ref{te_eq}. 
-However, the double primed conjugate multiplications (as in the step between equations~\ref{density_eq_fourier} and~\ref{density_evolution}) 
+The same type of procedure may be applied to Eqs.~\ref{ve_eq}-\ref{te_eq}. 
+However, the double primed conjugate multiplications (as in the step between Eqs.~\ref{density_eq_fourier} and~\ref{density_evolution}) 
 must be done with the Fourier fields, $\fmei v_{\vec{k}''}$,  $- \phi_{\vec{k}''}$, and $\frac{3}{2} t_{\vec{k}''}$ rather than 
 $v_{\vec{k}''}$, $\varpi_{\vec{k}''}$, and $t_{\vec{k}''}$.
 These produce the correct energy terms, and most importantly still conserve the nonlinearities. The corresponding expressions for the perpendicular kinetic energy are:
