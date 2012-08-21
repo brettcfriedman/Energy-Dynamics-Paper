@@ -111,7 +111,7 @@ improve our paper by making us provide some important details that we had left o
 {\noindent \itshape  On page 3, the paper states that the “nonlinear drift wave instability dominates when
 the fluctuation amplitude becomes large enough”. Can the authors provide an estimate of the threshold? }\\
 
-Response: The nonlinear instability takes over when the ratio $Q_n(n=0)/Q_n(n=1)$ becomes 1, or larger. This is when pumping of net energy from the $n=1$ drift waves
+{\noindent The nonlinear instability takes over when the ratio $Q_n(n=0)/Q_n(n=1)$ becomes 1, or larger. This is when pumping of net energy from the $n=1$ drift waves
 into the $n=0$ density fluctuations reverses direction. According to the simulations, this happens at RMS fluctuation level $\delta n/N_0$ as small as $2-3\%$;
 in saturated turbulence $\delta n/N_0 \sim 10 \%$ and the nonlinear drive completely dominates.
 We agree with the referee that this is important information and have added some text on pages 3 and 9 stating these points. }\\
@@ -119,7 +119,8 @@ We agree with the referee that this is important information and have added some
 {\noindent \itshape    Dirichlet boundary conditions are used for the fluctuations at the radial boundaries r = 12 and 40 cm. The authors should indicate how the boundary values are chosen. }\\
 
 {\noindent We have indicated in the text on page 4 that the radial boundary locations used in the simulation correspond to the locations in the experiment where the fluctuations die away to only
-a few percent of the equilibrium values as seen in Figure 2c. This should justify use of Dirichlet boundary conditions at these points. }\\
+a few percent of the equilibrium values as seen in Figure 2c. We believe that the small value of the fluctuations justify use of zero-value Dirichlet boundary conditions at these points, although
+we acknowledge that the inner boundary could have been moved in a centimeter or two. }\\
 
 {\noindent \itshape  In Figure 2, and other figures, the traces are hard to distinguish without color. Unless all figures will be rendered in color in the print version, the traces should be better
 distinguished. }\\
@@ -133,7 +134,7 @@ experiment. Since this is an important point, it would be helpful if the n spect
 fixed value of m were shown as a part (d) of the figure, again with numerical and
 experimental traces. }\\
 
-{\noindent The referee is right to point out that a comparison of the axial wavenumber spectrum between simulation and experiment would significantly enhance our evidence for our conclusion.  Unfortunately, we do not have experimental measurements of the axial wavenumber spectrum in the experiment. This is extremely difficult to do in a machine like LAPD where the ratio between the axial and perpendicular wavenumber is so small.  In theory a measurement of axial wavenumber can be accomplished by carefully aligning two probes along the magnetic field and detecting a phase shift.  There are two problems with this: (1) Any slight misalignment of the two probes will introduce a phase shift due to the perpendicular structure of the turbulence.  As the perpendicular wavenumber is much much larger than the parallel, this is a significant problem when trying to distinguish between parallel wavelengths of 34m (fundamental mode in LAPD) versus >34m (something that might suggest n=0 dominance).  (2) These modes should be standing waves along the magnetic field:  there should be no preferred direction of propagation.  So the standard approach of measuring phase shift along the magnetic field between two probes should be ineffective unless there is a broken symmetry (which could happen due to the asymmetry in the two ends of LAPD (one has the plasma source, the other is a mesh door).  Having said all of this, we do realize that such a measurement would provide the greatest
+{\noindent The referee is right to point out that a comparison of the axial wavenumber spectrum between simulation and experiment would significantly enhance our evidence for our conclusion.  Unfortunately, we do not have experimental measurements of the axial wavenumber spectrum in the experiment. This is extremely difficult to do in a machine like LAPD where the ratio between the axial and perpendicular wavenumber is so small.  In theory a measurement of axial wavenumber can be accomplished by carefully aligning two probes along the magnetic field and detecting a phase shift.  There are two problems with this: (1) Any slight misalignment of the two probes will introduce a phase shift due to the perpendicular structure of the turbulence.  As the perpendicular wavenumber is much much larger than the parallel, this is a significant problem when trying to distinguish between parallel wavelengths of 17m ($n=1$ mode in LAPD) versus wavelengths $>$17m (something that might suggest n=0 dominance).  (2) These modes should be standing waves along the magnetic field:  there should be no preferred direction of propagation.  So the standard approach of measuring phase shift along the magnetic field between two probes should be ineffective unless there is a broken symmetry (which could happen due to the asymmetry in the two ends of LAPD (one has the plasma source, the other is a mesh door).  Having said all of this, we do realize that such a measurement would provide the greatest
 evidence for the presence of the nonlinear instability in the experiment and it is a goal of ours to find a way to do this in the future. 
 But since such a measurement is not likely to be accurate at the moment, we have had to rely on more indirect evidence, such as that discussed in Section V. }\\
    
@@ -144,7 +145,7 @@ statement that “the simulation reproduces these characteristics of experimenta
 measurements with rather good qualitative and quantitative accuracy”, the differences for
 $r < 20$ cm should be explained. }\\
 
-{\noindent We acknowledge that there is an area between 15-20 cm where the fluctuation levels disagree at a higher level than elsewhere. We believe that this discrepency is due to the smoothed
+{\noindent We acknowledge that there is an area between 15-20 cm where the fluctuation levels disagree at a higher level than elsewhere. We believe that this discrepancy is due to the smoothed
 profiles that we use in the simulation. It is clear that at other radii, the fluctuation level of the experiment is bumpier than that of the simulation, and this is also a result
 of a bumpier experimental profile. We did not work on fine tuning our simulation profiles to achieve better validation because validation wasn't the primary intent of this study,
 and we felt that the agreement between simulation and experiment was good enough to proceed with the energetics analysis. In this respect, we have not quantified the agreement between 
@@ -192,7 +193,7 @@ initials should be included. }\\
 
 
 Additional author comment 1: After submission, we discovered a small error in our comparison of the amplitudes of the power spectra in Fig 2a and Fig 10. 
-We have corrected the error by using Parseval's Theorem to correctly weight the spectra. The new figures do not change any of the conclusions of the paper and no text needed to be changed as a result. }\\
+We have corrected the error by using Parseval's Theorem to correctly weight the spectra. The new figures do not change any of the conclusions of the paper and no text needed to be changed as a result. \\
 
 Additional author comment 2: After submission, we received interesting feedback on our preprint which suggested that alternative normalizations could be used in our energy equation. As a result of this discussion, we have added a few lines of text to the end of Section III which clarifies our position in using the normalizations reported in the manuscript. \\
 

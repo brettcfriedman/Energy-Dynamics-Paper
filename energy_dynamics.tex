@@ -319,7 +319,7 @@ scheme for the advective nonlinearities to reflect this analytic property of the
 However, most common numerical advection schemes do not conserve energy for finite grid spacing. Therefore, an Arakawa advection scheme~\cite{arakawa1966} that conserves 
 energy of the advected quantity is used for the nonlinear advection terms in the simulations.
 
-The linear terms in Eqs. \ref{ni_eq}-\ref{te_eq} do not conserve energy individually or as a whole. The linear terms are broken up into three contributions in Eqn.~\ref{dEdt_j}.
+The linear terms in Eqs. \ref{ni_eq}-\ref{te_eq} do not conserve energy individually or as a whole. The linear terms are broken up into three contributions in Eq.~\ref{dEdt_j}.
 $D_{j}(\vec{k})$ represents nonconservative energy dissipation due to collisions, artificial diffusion and viscosity, and the density and temperature sources.
 Each contribution to $D_j(\vec{k})$ is negative, and the exact expressions are given in the Appendix. 
 $C_j(\vec{k})$ contains the linear terms dubbed ``transfer channels''~\cite{scott2002}. They are rewritten here:
@@ -400,7 +400,7 @@ There are a few clear nonlinear properties
 seen in these figures. The first is that the energy is located in different spectral regions for the different energy types. This has to be a nonlinear effect because the linear eigenmodes
 are Fourier modes in the azimuthal and axial directions and all fields grow at the same rate for an eigenmode. 
 Another property unexpected from linear stability analysis is that most of the potential and perpendicular kinetic energy ($E_n$, $E_t$, and $E_\phi$) is contained in $n=0$ ($k_\para = 0$) 
-structures, which are often called flute modes. Previous studies pointed out this flute mode dominance in LAPD simulations~\cite{rogers2010,Umansky2011}. The study by Rogers et. al.~\cite{rogers2010},
+structures, which are often called flute modes. Previous studies pointed out this flute mode dominance in LAPD simulations~\cite{rogers2010,Umansky2011}. The study by Rogers et al.~\cite{rogers2010},
 however, used a momentum source that produced a large radial electric field, possibly leading to a dominating Kelvin-Helmoltz instability at $k_\para = 0$.
 Such a feature is unexpected in this study because there is no $n=0$ linear instability present in the system, which is confirmed by eigenvalue calculations~\cite{Popovich2010a}.
 The only linear instability of the system is the
